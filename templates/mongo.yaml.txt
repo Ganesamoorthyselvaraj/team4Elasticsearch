@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongo-pv
+  name: ganeshmongo-pv
 spec:
   capacity:
     storage: {{ .Values.mongo.storage }}
@@ -13,7 +13,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongo-pvc
+  name: ganeshmongo-pvc
 spec:
   accessModes:
     - ReadWriteOnce
