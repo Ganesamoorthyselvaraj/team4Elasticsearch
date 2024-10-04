@@ -24,10 +24,19 @@ productService:
 
 ingress:
   enabled: true
-  hosts:
-    - host: user.test.com
-      paths:
-        - /
-    - host: product.test.com
-      paths:
-        - /
+  http:
+    paths:
+      - path: /users(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: userService
+            port:
+              number: 8081
+      - path: /products(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: productService
+            port:
+              number: 8082
