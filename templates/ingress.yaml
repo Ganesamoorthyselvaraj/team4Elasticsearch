@@ -17,14 +17,14 @@ spec:
           service:
             name: user-service
             port:
-              number: 8081
+              number: 8085
       - path: /addCustomer.html
         pathType: ImplementationSpecific
         backend:
           service:
             name: user-service
             port:
-              number: 8081
+              number: 8085
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -45,11 +45,11 @@ spec:
           service:
             name: product-service
             port:
-              number: 8082
+              number: 8086
       - path: /addProject.html
         pathType: ImplementationSpecific
         backend:
           service:
             name: product-service
             port:
-              number: 8082
+              number: 8086
