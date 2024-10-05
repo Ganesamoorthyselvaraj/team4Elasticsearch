@@ -46,11 +46,11 @@ ingress:
           service:
             name: productService
             port:
-              number: 8085
+              number: 8086
       - path: /addCustomer.html
         pathType: ImplementationSpecific
         backend:
           service:
             name: userService
             port:
-              number: 8086
+              number: 8085
